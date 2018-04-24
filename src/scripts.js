@@ -1,7 +1,8 @@
 class Flash {
-  constructor(right, wrong){
+  constructor(right, wrong, bonus){
     this.right = true;
     this.wrong = true;
+    this.bonus = 5;
     this.score = 0;
   }
 
@@ -18,7 +19,16 @@ class Flash {
   incorrect(){
     setInterval(() => {
       if (this.wrong === true){
-        this.sore = this.score;
+        console.log(this.wrong);
+        this.score = this.score;
+        console.log(this.score);
+      }
+    }, 2000);
+  }
+
+  bonusPoints(){
+    setInterval(() => {
+      this.bonus += this.score;
       }
     }, 2000);
   }

@@ -8,6 +8,7 @@ describe('Flash', function() {
     jasmine.clock().install();
     flash.correct();
     flash.incorrect();
+    flash.bonusPoints();
   });
 
   afterEach(function(){
@@ -20,6 +21,11 @@ describe('Flash', function() {
   });
 
   it('should test whether a card is answered incorrect and does nothing to the score every 3001 milliseconds', function() {
+    jasmine.clock().tick(3001);
+    expect(flash.score).toEqual(flash.score);
+  });
+
+  it('should add 5 points to the total score every 3001 milliseconds', function() {
     jasmine.clock().tick(3001);
     expect(flash.score).toEqual(flash.score);
   });
