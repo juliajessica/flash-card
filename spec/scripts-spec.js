@@ -25,9 +25,9 @@ describe('Flash', function() {
     expect(flash.score).toEqual(flash.score);
   });
 
-  it('should add 5 points to the total score every 3001 milliseconds', function() {
-    jasmine.clock().tick(3001);
-    expect(flash.score).toEqual(flash.score);
+  it('should add 5 points to the total score every 6001 milliseconds', function() {
+    jasmine.clock().tick(6001);
+    expect(flash.score).toEqual(5);
   });
 
 });//closes import
