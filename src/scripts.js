@@ -1,6 +1,6 @@
 class Flash {
   constructor(right, wrong){
-    this.right = right;
+    this.right = true;
     this.wrong = wrong;
     this.score = 0;
   }
