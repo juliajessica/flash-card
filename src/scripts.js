@@ -2,14 +2,17 @@ class Flash {
   constructor(right, wrong){
     this.right = right;
     this.wrong = wrong;
+    this.score = 0;
   }
 
-  correct(){
-    setInterval((){
+  correct() {
+    setInterval(() => {
       if (this.right === true){
-        return this.right++;
-      }, 2000);
-    }
+        this.score++; //add one
+      } else {
+        this.score;
+      }
+    }, 2000);
   }
 
 }//close class

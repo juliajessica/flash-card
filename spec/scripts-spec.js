@@ -1,6 +1,7 @@
 import { Flash } from './../src/scripts.js';
 
 describe('Flash', function() {
+  let flash; //defining flash asa variable
 
   beforeEach(function(){
     flash = new Flash(0); //0 is the total score
@@ -8,7 +9,13 @@ describe('Flash', function() {
     flash.correct();
   });
 
-  it('should test whether a card is answered correctly', function() {
-    expect(flash.right).toEqual(1);
+  afterEach(function(){
+    jasmine.clock().uninstall();
+  }); //turn off clock
+
+  it('should test whether a card is answered correct and adds one every 6001 milliseconds', function() {
+    jasmine.clock().tick(6001);
+    expect(flash.score).toEqual(1);
   });
-});
+
+});//closes import
