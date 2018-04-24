@@ -7,6 +7,7 @@ describe('Flash', function() {
     flash = new Flash(0); //0 is the total score
     jasmine.clock().install();
     flash.correct();
+    flash.incorrect();
   });
 
   afterEach(function(){
@@ -16,6 +17,11 @@ describe('Flash', function() {
   it('should test whether a card is answered correct and adds one every 3001 milliseconds', function() {
     jasmine.clock().tick(3001);
     expect(flash.score).toEqual(1);
+  });
+
+  it('should test whether a card is answered incorrect and does nothing to the score every 3001 milliseconds', function() {
+    jasmine.clock().tick(3001);
+    expect(flash.score).toEqual(flash.score);
   });
 
 });//closes import
