@@ -6,13 +6,34 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="card">
-        <h2>What Am I</h2>
-      </div>
-      <form id="haiku-form">
-        <div id="form-inputs" class="control-group">
+      <div class="col-md-8" id="cards">
+        <div class="card">
+          <h2>What Am I</h2>
+        </div>
+        <form id="haiku-form">
+          <div id="form-inputs" class="control-group">
+          </br>
+            <div class="card" id="js">
+              <h3>Which best Describes JavaScript</h3>
+            </div>
+            <div class="card" id="js-show">
+              <select class="form-control" id="js-question">
+                <option value="1">Coffee</option>
+                <option value="2">Tea</option>
+                <option value="3">Kombucha</option>
+                <option value="4">Water</option>
+              </select>
+              <button type="button" class="btn btn-secondary btn-lg active" id="js-btn">submit</button>
+            </div>
+          </div>
         </div>
       </form>
+      <div class="col-md-4 float-right" id="score-card">
+        <div class="card">
+          <h3>Score Card</h3>
+          <p>Total points: <span id="total-points"></span></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

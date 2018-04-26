@@ -1,32 +1,33 @@
 class Flash {
-  constructor(right, wrong){
-    this.right = true;
-    this.wrong = true;
-    // this.bonus;
+  constructor(score){
+    this.right;
+    // this.wrong = true;
     this.score = 0;
+    // this.bonus;
   }
 
-  correct() {
+  correct() { //breaking here
+    this.right = 1;
     setInterval(() => {
-      if (this.right === true){
-        this.score++; //add one
+      if (this.right === 1){
+        this.score +=1; //add one
       } else {
         this.score;
       }
     }, 2000);
   }
 
-  incorrect(){
-    setInterval(() => {
-      if (this.wrong === true){
-        // console.log(this.wrong);
-        this.score = this.score;
-        // console.log(this.score);
-      } else {
-        this.score;
-      }
-    }, 2000);
-  }
+  // incorrect(){
+  //   setInterval(() => {
+  //     if (this.wrong === true){
+  //       // console.log(this.wrong);
+  //       this.score = this.score;
+  //       // console.log(this.score);
+  //     } else {
+  //       this.score;
+  //     }
+  //   }, 2000);
+  // }
 
   bonusPoints(){
     // this.bonus = 5;
